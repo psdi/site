@@ -12,4 +12,6 @@ $router->get('/(\w+)?', function ($name = null) {
     echo 'Hello' . $addtl;
 });
 
+$router->get('/post/(\d+)/(\d+)/(.+)', '\Site\PostHandler@handle');
+
 $router->run();
