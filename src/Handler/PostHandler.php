@@ -1,6 +1,6 @@
 <?php
 
-namespace Site;
+namespace Site\Handler;
 
 use Michelf\MarkdownExtra;
 
