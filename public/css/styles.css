@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  color: #313638;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F6F6F3;
+}
+body > * {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrap {
+  width: 90%;
+  max-width: 1000px;
+}
+
+aside {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 14em;
+}
+aside div.title-wrapper {
+  border-left: 3px solid #313638;
+  border-bottom: 3px solid #313638;
+  padding: 15em 0 0 0;
+}
+aside div.title {
+  display: flex;
+  font-weight: 800;
+  font-size: 30pt;
+}
+aside div.title > * {
+  color: #F6F6F3;
+}
+aside div.title .title-part-zero {
+  background: #313638;
+  padding-left: 0.25em;
+}
+aside div.title .title-part-one {
+  background: #D58936;
+  padding: 0 0.1em 0 1em;
+}
+aside div.title .title-part-two {
+  padding: 0 0 0 0.1em;
+  color: #313638;
+}
+aside nav {
+  border-right: 3px solid #313638;
+}
+aside nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  width: 100%;
+  padding: 0;
+}
+aside nav ul li {
+  background: #313638;
+  margin-right: 0;
+  transition: width 250ms ease-out 100ms;
+  text-align: right;
+  padding: 3px 5px 3px 0;
+}
+aside nav ul li:nth-child(1) {
+  width: 11em;
+}
+aside nav ul li:nth-child(2) {
+  background: #D58936;
+  width: 8em;
+}
+aside nav ul li:nth-child(3) {
+  width: 9.5em;
+}
+aside nav ul li:hover {
+  width: 80%;
+}
+aside nav ul a {
+  text-decoration: none;
+  color: #F6F6F3;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+main {
+  float: right;
+  width: 70%;
+  padding-top: 5em;
+}
