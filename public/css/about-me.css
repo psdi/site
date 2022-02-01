@@ -1,0 +1,29 @@
+p {
+    line-height: 27.2px;
+}
+
+figure {
+    text-align: center;
+    border: 1px dotted grey;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+figure.right {
+    position: relative;
+    /* display: block; */
+    float: right;
+    left: 23%;
+    margin-left: -18%;
+}
+
+figure img {
+    vertical-align: top;
+}
+
+figure figcaption {
+    font-size: 10pt;
+    font-style: italic;
+    margin: 0 auto;
+    padding-top: 5px;
+}
