@@ -8,6 +8,8 @@ class PostHandler
 {
     public static $_titles = [];
 
+    public const POSTS_PER_PAGE = 5;
+
     public static function handle(
         string $year = null,
         string $month = null,
@@ -36,7 +38,7 @@ class PostHandler
         return false;
     }
 
-    private static function getPosts($page = 1, $perPage = 0)
+    public static function getPosts($page = 1, $perPage = 0)
     {
         if ($perPage === 0) {
             $perPage = 5;
@@ -51,8 +53,12 @@ class PostHandler
             $parts = explode('_', $title);
 
             $post['date'] = strtotime(str_replace('posts/', '', $parts[0]));
-            $post['url'] = '/post' . date('Y/m', $post['date']) . '/' . str_replace('.md', '', $parts[1]);
-            $post['content'] = MarkdownExtra::defaultTransform(file_get_contents($title));
+            $post['url'] = '/post/' . date('Y/m', $post['date']) . '/' . str_replace('.md', '', $parts[1]);
+            $content = MarkdownExtra::defaultTransform(file_get_contents($title));
+
+            $contentParts = explode('</h1>', $content, 2);
+            $post['title'] = str_replace('<h1>', '', $contentParts[0]);
+            $post['content'] = $contentParts[1];
 
             $tmp[] = $post;
         }
@@ -63,7 +69,7 @@ class PostHandler
     private static function getPostTitles()
     {
         if (!self::$_titles) {
-            self::$_titles = array_reverse(glob('posts/*.md'));
+            self::$_titles = array_reverse(glob('posts/??*_??*.md'));
         }
 
         return self::$_titles;

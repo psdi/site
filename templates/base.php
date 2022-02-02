@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="public/css/styles.css" />
+  <link rel="stylesheet" href="/public/css/styles.css" />
   <?php foreach ($styles as $style): ?>
     <link rel="stylesheet" href="<?php echo $style; ?>" />
   <?php endforeach; ?>
