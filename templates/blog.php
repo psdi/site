@@ -13,3 +13,13 @@
     </div>
   <?php endforeach; ?>
 </div>
+
+<div class="pagination-wrapper">
+  <?php if (isset($pagination['prev']) && isset($page) && $pagination['prev']): ?>
+    <div><a href="/blog/<?php echo $page - 1; ?>">← Previous</a></div>
+  <?php endif; ?>
+
+  <?php if (isset($pagination['next']) && isset($page) && $pagination['next']): ?>
+    <div><a href="/blog/<?php echo $page + 1; ?>">Next →</a></div>
+  <?php endif; ?>
+</div>

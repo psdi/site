@@ -41,7 +41,7 @@ class PostHandler
     public static function getPosts($page = 1, $perPage = 0)
     {
         if ($perPage === 0) {
-            $perPage = 5;
+            $perPage = self::POSTS_PER_PAGE;
         }
 
         $titles = self::getPostTitles();
@@ -64,6 +64,16 @@ class PostHandler
         }
 
         return $tmp;
+    }
+
+    public static function hasPagination($page = 1)
+    {
+        $total = count(self::getPostTitles());
+
+        return [
+            'prev' => $page > 1,
+            'next' => $total > $page * self::POSTS_PER_PAGE,
+        ];
     }
 
     private static function getPostTitles()
