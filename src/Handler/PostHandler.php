@@ -15,11 +15,8 @@ class PostHandler
         string $year = null,
         string $month = null,
         string $name = null
-    ) : void {
-        $post = self::findPost($year, $month, $name);
-
-        // render (todo: render in template)
-        echo $post['content'];
+    ) : array {
+        return self::findPost($year, $month, $name);
     }
 
     private static function findPost(

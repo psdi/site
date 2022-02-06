@@ -27,6 +27,7 @@ $router->get('/blog(/\d+)?(/)?', function ($page = null) {
     $template->setVar('title', 'Blog');
     $template->setVar('pagination', PostHandler::hasPagination($page));
     $template->setVar('page', $page);
+    $template->setVar('isPreview', true);
     $template->setVar('content', $template->render('templates/blog.php'));
     $template->setVar('styles', ['/public/css/blog.css']);
 
@@ -42,6 +43,15 @@ $router->get('/about-me', function () {
     echo $template->render('templates/base.php');
 });
 
-$router->get('/post/(\d+)/(\d+)/(.+)', '\Site\Handler\PostHandler@handle');
+$router->get('/post/(\d+)/(\d+)/(.+)', function ($year, $month, $name) {
+    $post = PostHandler::handle($year, $month, $name);
+
+    $template = new Template();
+    $template->setVar('title', $post['title']);
+    $template->setVar('posts', [$post]);
+    $template->setVar('content', $template->render('templates/blog.php'));
+
+    echo $template->render('templates/base.php');
+});
 
 $router->run();

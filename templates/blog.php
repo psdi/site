@@ -10,11 +10,15 @@
 
         <div class="date"><?php echo date('d F Y', $post['date']); ?></div>
 
-        <div class="body"><?php echo $post['preview']; ?></div>
+        <?php if (isset($isPreview) && $isPreview): ?>
+          <div class="body"><?php echo $post['preview']; ?></div>
 
-        <div class="post-link">
-          <a href="<?php echo $post['url']; ?>">Read more...</a>
-        </div>
+          <div class="post-link">
+            <a href="<?php echo $post['url']; ?>">Read more...</a>
+          </div>
+        <?php else: ?>
+          <div class="body"><?php echo $post['content']; ?></div>
+        <?php endif; ?>
       </div>
     <?php endforeach; ?>
   </div>
