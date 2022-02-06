@@ -28,6 +28,7 @@ $router->get('/blog(/\d+)?(/)?', function ($page = null) {
     $template->setVar('pagination', PostHandler::hasPagination($page));
     $template->setVar('page', $page);
     $template->setVar('content', $template->render('templates/blog.php'));
+    $template->setVar('styles', ['/public/css/blog.css']);
 
     echo $template->render('templates/base.php');
 });
