@@ -3,9 +3,9 @@
     <?php foreach ($posts as $post): ?>
       <div class="post">
         <h2>
-          <a href="<?php echo $post['url']; ?>">
+          <?php if ($isPreview): ?><a href="<?php echo $post['url']; ?>"><?php endif; ?>
             <?php echo $post['title']; ?>
-          </a>
+          <?php if ($isPreview): ?></a><?php endif; ?>
         </h2>
 
         <div class="date"><?php echo date('d F Y', $post['date']); ?></div>

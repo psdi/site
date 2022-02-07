@@ -50,6 +50,7 @@ $router->get('/post/(\d+)/(\d+)/(.+)', function ($year, $month, $name) {
     $template->setVar('title', $post['title']);
     $template->setVar('posts', [$post]);
     $template->setVar('content', $template->render('templates/blog.php'));
+    $template->setVar('styles', ['/public/css/blog.css']);
 
     echo $template->render('templates/base.php');
 });

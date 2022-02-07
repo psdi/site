@@ -9,6 +9,21 @@ div.blog-wrapper {
 div.post {
     padding-bottom: 2em;
 }
+div.post > h2 {
+    font-size: 29pt;
+    padding-bottom: 0;
+    margin-bottom: 0.15em;
+}
+div.post div.date {
+    font-size: 11pt;
+    text-transform: uppercase;
+}
+div.post div.body {
+    padding-top: 0.5em;
+}
+div.post div.body p {
+    line-height: 27.2px;
+}
 
 div.pagination-wrapper {
     display: flex;
