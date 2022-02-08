@@ -13,6 +13,7 @@ $router->get('/', function () {
     $template = new Template();
     $template->setVar('title', 'Home');
     $template->setVar('content', $template->render('templates/home.php'));
+    $template->setVar('styles', ['/public/css/home.css']);
 
     echo $template->render('templates/base.php');
 });

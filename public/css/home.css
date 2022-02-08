@@ -1,0 +1,17 @@
+h1 {
+    font-size: 30pt;
+}
+
+p {
+    line-height: 25px;
+}
+
+div.crabs-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+img:last-of-type {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
