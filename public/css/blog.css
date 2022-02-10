@@ -5,6 +5,9 @@ div.blog-wrapper {
     flex-direction: column;
     justify-content: space-between;
 }
+div.body a, div.post-link a {
+    color: #DC9E82;
+}
 
 div.post {
     padding-bottom: 2em;
@@ -22,7 +25,7 @@ div.post div.body {
     padding-top: 0.5em;
 }
 div.post div.body p {
-    line-height: 27.2px;
+    line-height: 24px;
 }
 
 div.pagination-wrapper {
