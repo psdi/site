@@ -11,7 +11,30 @@ div.crabs-wrapper {
     justify-content: center;
 }
 
-img:last-of-type {
+.img-two {
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 25pt;
+    }
+
+    .crabs-wrapper {
+        padding: 0.75em 0;
+    }
+
+    .crabs-wrapper .img-one {
+        object-fit: cover;
+        width: 100vw;
+        height: 200px;
+        transform: scale(1.1);
+    }
+
+    .crabs-wrapper .img-two {
+        display: none;
+    }
 }

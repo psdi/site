@@ -3,12 +3,12 @@
 <p>It's dangerous to go alone! Here, have some crabs.</p>
 
 <div class="crabs-wrapper">
-  <img src="public/media/crab.gif" alt="swimming crabs" />
-  <img src="public/media/crab.gif" alt="swimming crabs" />
+  <img src="public/media/crab.gif" alt="swimming crabs" class="img-one" />
+  <img src="public/media/crab.gif" alt="swimming crabs" class="img-two" />
 </div>
 
 <p>
-My small corner of the web may be small as of writing this, but it still growing, unlike me, cursed to be 162 cm forever.
+My corner of the web may be small as of writing this, but it still growing, unlike me, cursed to be 162 cm forever.
 I was planning to write reviews about music that I like (could be interesting), as well as share personal reflections
 and anecdotes (probably less interesting).
 </p>
