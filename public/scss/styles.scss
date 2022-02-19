@@ -18,7 +18,6 @@ body {
 }
 
 .wrap {
-  overflow-x: hidden;
   width: 90%;
   max-width: 1000px;
 }
@@ -125,6 +124,7 @@ main {
 
 @media screen and (max-width: 1110px) {
   .wrap {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
