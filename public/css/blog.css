@@ -64,3 +64,40 @@ figure figcaption {
     margin: 0 auto;
     padding-top: 5px;
 }
+
+@media screen and (max-width: 1360px) {
+    figure + p {
+        clear: both;
+    }
+
+    figure.center {
+        width: 100%;
+    }
+
+    figure.center image {
+        object-fit: cover;
+        height: 200px;
+    }
+
+    figure.right, figure.left {
+        float: none;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        margin-left: 0;
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.post > h2 {
+        font-size: 25pt;
+        line-height: 25pt;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    figure img {
+        width: 100%;
+    }
+}
