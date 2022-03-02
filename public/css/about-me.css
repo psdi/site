@@ -27,3 +27,31 @@ figure figcaption {
     margin: 0 auto;
     padding-top: 5px;
 }
+
+ul {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 1110px) {
+    figure, figure.right {
+        float: none;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        margin-left: 0;
+        border: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    figure, figure.right {
+        background: #fff;
+        padding: 1em;
+        border: 0;
+    }
+
+    figure img {
+        width: 100%;
+    }
+}

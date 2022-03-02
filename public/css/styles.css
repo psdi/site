@@ -104,3 +104,61 @@ main {
   max-width: 70%;
   padding: 5em 0 6em;
 }
+
+@media screen and (max-width: 1110px) {
+  .wrap {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wrap aside {
+    float: none;
+    width: 100vw;
+    box-shadow: 0 5px 5px -5px gray;
+    background: #313638;
+  }
+  .wrap aside div.title-wrapper {
+    padding: 0.25em 0;
+    justify-content: flex-end;
+  }
+  .wrap aside div.title {
+    justify-content: center;
+  }
+  .wrap aside div.title .title-part-one {
+    color: #fff;
+  }
+  .wrap aside div.title .title-part-two {
+    padding: 0 1.25em 0 0.1em;
+    color: #fff;
+  }
+  .wrap aside nav {
+    border-right: none;
+    background: #fff;
+  }
+  .wrap aside nav ul {
+    flex-direction: row;
+    height: 25px;
+  }
+  .wrap aside nav ul li {
+    flex: 1 1 0px;
+    text-align: center;
+    background: none;
+  }
+  .wrap aside nav ul li a {
+    color: #313638;
+  }
+
+  .wrap main {
+    float: none;
+    width: 100%;
+    min-width: 100%;
+    padding: 2em 1em 3em;
+  }
+
+  main p {
+    text-align: justify;
+  }
+}
